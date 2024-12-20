@@ -140,5 +140,70 @@
                 </div>
                 <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center">
                     <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center text-primary-600 dark:text-primary-400 text-2xl font-bold mx-auto mb-4">2</div>
-                    <h3 class="text-
+                    <h3 class="text-xl font-bold mb-2">قم بالتثبيت</h3>
+                    <p class="dark:text-gray-300">اتبع تعليمات التثبيت البسيطة لتشغيل D-BOT</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+                    <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center text-primary-600 dark:text-primary-400 text-2xl font-bold mx-auto mb-4">3</div>
+                    <h3 class="text-xl font-bold mb-2">ابدأ اللعب</h3>
+                    <p class="dark:text-gray-300">استمتع بتجربة لعب محسنة وأداء متفوق مع D-BOT</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-24">
+            <h2 class="text-3xl font-bold mb-8 text-center text-primary-600 dark:text-primary-400">آخر الأخبار والتحديثات</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-2 text-primary-600 dark:text-primary-400">تحديث جديد: الإصدار 2.5</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">تم إطلاق الإصدار 2.5 مع تحسينات في الأداء وميزات جديدة.</p>
+                    <a href="#" class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300">اقرأ المزيد</a>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-2 text-primary-600 dark:text-primary-400">دليل: كيفية تحسين أدائك في GGE</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">تعلم أفضل الاستراتيجيات لتحسين مستوى لعبك باستخدام D-BOT.</p>
+                    <a href="#" class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300">اقرأ المزيد</a>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-2 text-primary-600 dark:text-primary-400">قادم قريبًا: ميزات جديدة مثيرة</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">ترقبوا الميزات الجديدة القادمة في التحديث القادم لـ D-BOT.</p>
+                    <a href="#" class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300">اقرأ المزيد</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 p-8 mt-24">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 D-BOT. جميع الحقوق محفوظة.</p>
+            <p>تم التطوير بواسطة Ahmed.R</p>
+            <div class="mt-4">
+                <a href="#" class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 mx-2"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 mx-2"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+
+        // Check for saved theme preference or use device preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
+
+        // Toggle theme
+        themeToggle.addEventListener('click', function() {
+            htmlElement.classList.toggle('dark');
+            localStorage.theme = htmlElement.classList.contains('dark') ? 'dark' : 'light';
+        });
+    </script>
+</body>
+</html>
 
