@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-BOT - بوت اللعبة الأمثل لـ GGE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {"50":"#eff6ff","100":"#dbeafe","200":"#bfdbfe","300":"#93c5fd","400":"#60a5fa","500":"#3b82f6","600":"#2563eb","700":"#1d4ed8","800":"#1e40af","900":"#1e3a8a","950":"#172554"}
+                    }
+                },
+                fontFamily: {
+                    'body': [
+                        'Inter', 
+                        'ui-sans-serif', 
+                        'system-ui', 
+                        '-apple-system', 
+                        'system-ui', 
+                        'Segoe UI', 
+                        'Roboto', 
+                        'Helvetica Neue', 
+                        'Arial', 
+                        'Noto Sans', 
+                        'sans-serif', 
+                        'Apple Color Emoji', 
+                        'Segoe UI Emoji', 
+                        'Segoe UI Symbol', 
+                        'Noto Color Emoji'
+                    ],
+                    'sans': [
+                        'Inter', 
+                        'ui-sans-serif', 
+                        'system-ui', 
+                        '-apple-system', 
+                        'system-ui', 
+                        'Segoe UI', 
+                        'Roboto', 
+                        'Helvetica Neue', 
+                        'Arial', 
+                        'Noto Sans', 
+                        'sans-serif', 
+                        'Apple Color Emoji', 
+                        'Segoe UI Emoji', 
+                        'Segoe UI Symbol', 
+                        'Noto Color Emoji'
+                    ]
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white font-sans transition-colors duration-300">
+    <header class="bg-white dark:bg-gray-800 shadow-lg">
+        <nav class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-primary-600 dark:text-primary-400">D-BOT</a>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition duration-300">الرئيسية</a></li>
+                <li><a href="features.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition duration-300">المميزات</a></li>
+                <li><a href="pricing.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition duration-300">الأسعار</a></li>
+                <li><a href="tutorial.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition duration-300">الدليل التعليمي</a></li>
+                <li><a href="faq.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition duration-300">الأسئلة الشائعة</a></li>
+                <li><a href="contact.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition duration-300">اتصل بنا</a></li>
+            </ul>
+            <button id="themeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700">
+                <i class="fas fa-sun text-yellow-500 dark:hidden"></i>
+                <i class="fas fa-moon text-blue-300 hidden dark:inline"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container mx-auto mt-16 px-4">
+        <section class="text-center">
+            <h1 class="text-5xl font-bold mb-6 text-primary-600 dark:text-primary-400">D-BOT</h1>
+            <p class="text-2xl mb-12 dark:text-gray-300">البوت الأمثل للعبة GGE - ارفع مستوى لعبك الآن!</p>
+            <a href="https://wa.me/201098662418" target="_blank" class="bg-primary-600 text-white px-8 py-4 rounded-full text-xl font-bold hover:bg-primary-700 transition duration-300 inline-flex items-center">
+                <i class="fab fa-whatsapp mr-2"></i> احصل عليه الآن عبر واتساب
+            </a>
+        </section>
+
+        <section class="mt-24">
+            <h2 class="text-3xl font-bold mb-8 text-center text-primary-600 dark:text-primary-400">لماذا تختار D-BOT؟</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+                    <i class="fas fa-rocket text-4xl text-primary-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">أداء فائق</h3>
+                    <p class="dark:text-gray-300">استمتع بأداء لا مثيل له في لعبة GGE مع D-BOT</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+                    <i class="fas fa-cogs text-4xl text-primary-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">سهولة الاستخدام</h3>
+                    <p class="dark:text-gray-300">واجهة بسيطة وسهلة الاستخدام لجميع المستويات</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+                    <i class="fas fa-headset text-4xl text-primary-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">دعم فني متميز</h3>
+                    <p class="dark:text-gray-300">فريق دعم متخصص جاهز لمساعدتك على مدار الساعة</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-24">
+            <h2 class="text-3xl font-bold mb-8 text-center text-primary-600 dark:text-primary-400">ميزات إضافية</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-shield-alt text-3xl text-primary-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">حماية متقدمة</h3>
+                    <p class="dark:text-gray-300">نظام حماية قوي لضمان أمان حسابك</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-chart-line text-3xl text-primary-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">تحليلات مفصلة</h3>
+                    <p class="dark:text-gray-300">تقارير وإحصائيات دقيقة لتحسين أدائك</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-sync text-3xl text-primary-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">تحديثات مستمرة</h3>
+                    <p class="dark:text-gray-300">تحديثات دورية لمواكبة تغييرات اللعبة</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-users text-3xl text-primary-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">مجتمع نشط</h3>
+                    <p class="dark:text-gray-300">انضم إلى مجتمع من اللاعبين المحترفين</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-24">
+            <h2 class="text-3xl font-bold mb-8 text-center text-primary-600 dark:text-primary-400">كيف يعمل D-BOT؟</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+                    <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center text-primary-600 dark:text-primary-400 text-2xl font-bold mx-auto mb-4">1</div>
+                    <h3 class="text-xl font-bold mb-2">قم بالتسجيل</h3>
+                    <p class="dark:text-gray-300">سجل حسابك واختر خطة الاشتراك المناسبة لك</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+                    <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center text-primary-600 dark:text-primary-400 text-2xl font-bold mx-auto mb-4">2</div>
+                    <h3 class="text-
+
