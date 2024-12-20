@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدليل التعليمي - D-BOT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {"50":"#eff6ff","100":"#dbeafe","200":"#bfdbfe","300":"#93c5fd","400":"#60a5fa","500":"#3b82f6","600":"#2563eb","700":"#1d4ed8","800":"#1e40af","900":"#1e3a8a","950":"#172554"}
+                    }
+                },
+                fontFamily: {
+                    'body': [
+                        'Inter', 
+                        'ui-sans-serif', 
+                        'system-ui', 
+                        '-apple-system', 
+                        'system-ui', 
+                        'Segoe UI', 
+                        'Roboto', 
+                        'Helvetica Neue', 
+                        'Arial', 
+                        'Noto Sans', 
+                        'sans-serif', 
+                        'Apple Color Emoji', 
+                        'Segoe UI Emoji', 
+                        'Segoe UI Symbol', 
+                        'Noto Color Emoji'
+                    ],
+                    'sans': [
+                        'Inter', 
+                        'ui-sans-serif', 
+                        'system-ui', 
+                        '-apple-system', 
+                        'system-ui', 
+                        'Segoe UI', 
+                        'Roboto', 
+                        'Helvetica Neue', 
+                        'Arial', 
+                        'Noto Sans', 
+                        'sans-serif', 
+                        'Apple Color Emoji', 
+                        'Segoe UI Emoji', 
+                        'Segoe UI Symbol', 
+                        'Noto Color Emoji'
+                    ]
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white font-sans transition-colors duration-300">
+    <header class="bg-white dark:bg-gray-800 shadow-lg">
+        <nav class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-primary-600 dark:text-primary-400">D-BOT</a>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition duration-300">الرئيسية</a></li>
+                <li><a href="features.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition duration-300">المميزات</a></li>
+                <li><a href="pricing.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition duration-300">الأسعار</a></li>
+                <li><a href="tutorial.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition duration-300">الدليل التعليمي</a></li>
+                <li><a href="faq.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition duration-300">الأسئلة الشائعة</a></li>
+                <li><a href="contact.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition duration-300">اتصل بنا</a></li>
+            </ul>
+            <button id="themeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700">
+                <i class="fas fa-sun text-yellow-500 dark:hidden"></i>
+                <i class="fas fa-moon text-blue-300 hidden dark:inline"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container mx-auto mt-16 px-4">
+        <h1 class="text-4xl font-bold mb-12 text-center text-primary-600 dark:text-primary-400">الدليل التعليمي لاستخدام D-BOT</h1>
+        <div class="max-w-3xl mx-auto space-y-12">
+            <section>
+                <h2 class="text-2xl font-bold mb-4 text-primary-600 dark:text-primary-400">1. تثبيت D-BOT</h2>
+                <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                    <li>قم بتحميل أحدث إصدار من D-BOT من صفحة التحميل الخاصة بنا.</li>
+                    <li>افتح ملف التثبيت وقم باتباع التعليمات على الشاشة.</li>
+                    <li>بعد اكتمال التثبيت، قم بتشغيل D-BOT.</li>
+                </ol>
+            </section>
+            <section>
+                <h2 class="text-2xl font-bold mb-4 text-primary-600 dark:text-primary-400">2. إعداد الحساب</h2>
+                <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                    <li>عند فتح D-BOT لأول مرة، ستظهر نافذة تسجيل الدخول.</li>
+                    <li>أدخل بيانات اعتماد حسابك في GGE.</li>
+                    <li>اقرأ وقم بالموافقة على شروط الخدمة.</li>
+                </ol>
+            </section>
+            <section>
+                <h2 class="text-2xl font-bold mb-4 text-primary-600 dark:text-primary-400">3. تكوين الإعدادات</h2>
+                <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                    <li>انتقل إلى قائمة "الإعدادات" في الواجهة الرئيسية.</li>
+                    <li>قم بتخصيص إعدادات البوت وفقًا لتفضيلاتك (مثل سرعة الاستجابة، الوضع الآمن، إلخ).</li>
+                    <li>تأكد من حفظ التغييرات قبل الخروج من قائمة الإعدادات.</li>
+                </ol>
+            </section>
+            <section>
+                <h2 class="text-2xl font-bold mb-4 text-primary-600 dark:text-primary-400">4. بدء استخدام D-BOT</h2>
+                <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                    <li>افتح لعبة GGE وتأكد من تسجيل الدخول إلى حسابك.</li>
+                    <li>عد إلى نافذة D-BOT وانقر على زر "بدء التشغيل".</li>
+                    <li>سيبدأ D-BOT في العمل تلقائيًا، وستلاحظ تحسينات في أدائك داخل اللعبة.</li>
+                </ol>
+            </section>
+            <section>
+                <h2 class="text-2xl font-bold mb-4 text-primary-600 dark:text-primary-400">5. مراقبة الأداء والتحليلات</h2>
+                <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                    <li>استخدم لوحة التحكم في D-BOT لمراقبة إحصائيات أدائك في الوقت الفعلي.</li>
+                    <li>راجع التقارير اليومية والأسبوعية لتحليل أدائك وتحديد مجالات التحسين.</li>
+                    <li>استفد من الاقتراحات التي يقدمها D-BOT لتحسين استراتيجيات اللعب الخاصة بك.</li>
+                </ol>
+            </section>
+            <section>
+                <h2 class="text-2xl font-bold mb-4 text-primary-600 dark:text-primary-400">6. تحديث وصيانة D-BOT</h2>
+                <ol class="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                    <li>تحقق بانتظام من وجود تحديثات جديدة لـ D-BOT.</li>
+                    <li>قم بتثبيت التحديثات فور توفرها للاستفادة من أحدث الميزات والتحسينات.</li>
+                    <li>إذا واجهت أي مشاكل، راجع قسم الأسئلة الشائعة أو اتصل بفريق الدعم الفني.</li>
+                </ol>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 p-8 mt-24">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 D-BOT. جميع الحقوق محفوظة.</p>
+            <p>تم التطوير بواسطة Ahmed.R</p>
+            <div class="mt-4">
+                <a href="#" class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 mx-2"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 mx-2"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+
+        // Check for saved theme preference or use device preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
+
+        // Toggle theme
+        themeToggle.addEventListener('click', function() {
+            htmlElement.classList.toggle('dark');
+            localStorage.theme = htmlElement.classList.contains('dark') ? 'dark' : 'light';
+        });
+    </script>
+</body>
+</html>
+
