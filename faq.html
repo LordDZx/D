@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأسئلة الشائعة - D-BOT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {"50":"#eff6ff","100":"#dbeafe","200":"#bfdbfe","300":"#93c5fd","400":"#60a5fa","500":"#3b82f6","600":"#2563eb","700":"#1d4ed8","800":"#1e40af","900":"#1e3a8a","950":"#172554"}
+                    }
+                },
+                fontFamily: {
+                    'body': [
+                        'Inter', 
+                        'ui-sans-serif', 
+                        'system-ui', 
+                        '-apple-system', 
+                        'system-ui', 
+                        'Segoe UI', 
+                        'Roboto', 
+                        'Helvetica Neue', 
+                        'Arial', 
+                        'Noto Sans', 
+                        'sans-serif', 
+                        'Apple Color Emoji', 
+                        'Segoe UI Emoji', 
+                        'Segoe UI Symbol', 
+                        'Noto Color Emoji'
+                    ],
+                    'sans': [
+                        'Inter', 
+                        'ui-sans-serif', 
+                        'system-ui', 
+                        '-apple-system', 
+                        'system-ui', 
+                        'Segoe UI', 
+                        'Roboto', 
+                        'Helvetica Neue', 
+                        'Arial', 
+                        'Noto Sans', 
+                        'sans-serif', 
+                        'Apple Color Emoji', 
+                        'Segoe UI Emoji', 
+                        'Segoe UI Symbol', 
+                        'Noto Color Emoji'
+                    ]
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white font-sans transition-colors duration-300">
+    <header class="bg-white dark:bg-gray-800 shadow-lg">
+        <nav class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-primary-600 dark:text-primary-400">D-BOT</a>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition duration-300">الرئيسية</a></li>
+                <li><a href="features.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition duration-300">المميزات</a></li>
+                <li><a href="pricing.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition duration-300">الأسعار</a></li>
+                <li><a href="tutorial.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition duration-300">الدليل التعليمي</a></li>
+                <li><a href="faq.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition duration-300">الأسئلة الشائعة</a></li>
+                <li><a href="contact.html" class="hover:text-primary-600 dark:hover:text-primary-400 transition duration-300">اتصل بنا</a></li>
+            </ul>
+            <button id="themeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700">
+                <i class="fas fa-sun text-yellow-500 dark:hidden"></i>
+                <i class="fas fa-moon text-blue-300 hidden dark:inline"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container mx-auto mt-16 px-4">
+        <h1 class="text-4xl font-bold mb-12 text-center text-primary-600 dark:text-primary-400">الأسئلة الشائعة</h1>
+        <div class="max-w-3xl mx-auto">
+            <div x-data="{ activeTab: 'general' }" class="mb-8">
+                <div class="flex justify-center space-x-4 mb-6">
+                    <button @click="activeTab = 'general'" :class="{ 'bg-primary-600 text-white': activeTab === 'general', 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300': activeTab !== 'general' }" class="px-4 py-2 rounded-full transition duration-300">عام</button>
+                    <button @click="activeTab = 'technical'" :class="{ 'bg-primary-600 text-white': activeTab === 'technical', 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300': activeTab !== 'technical' }" class="px-4 py-2 rounded-full transition duration-300">تقني</button>
+                    <button @click="activeTab = 'pricing'" :class="{ 'bg-primary-600 text-white': activeTab === 'pricing', 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300': activeTab !== 'pricing' }" class="px-4 py-2 rounded-full transition duration-300">الأسعار</button>
+                </div>
+                <div x-show="activeTab === 'general'" class="space-y-6">
+                    <div x-data="{ open: false }" class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+                        <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                            <span class="text-lg font-semibold">ما هو D-BOT؟</span>
+                            <i :class="open ? 'fa-chevron-up' : 'fa-chevron-down'" class="fas transition-transform duration-300"></i>
+                        </button>
+                        <div x-show="open" class="mt-4 text-gray-600 dark:text-gray-300">
+                            D-BOT هو بوت متطور مصمم خصيصًا للعبة GGE. يساعد اللاعبين على تحسين أدائهم وتحقيق نتائج أفضل في اللعبة من خلال أتمتة بعض المهام وتوفير تحليلات متقدمة.
+                        </div>
+                    </div>
+                    <div x-data="{ open: false }" class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+                        <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                            <span class="text-lg font-semibold">هل استخدام D-BOT آمن؟</span>
+                            <i :class="open ? 'fa-chevron-up' : 'fa-chevron-down'" class="fas transition-transform duration-300"></i>
+                        </button>
+                        <div x-show="open" class="mt-4 text-gray-600 dark:text-gray-300">
+                            نعم، D-BOT آمن للاستخدام. نحن نتبع أفضل ممارسات الأمان لحماية حسابك وبياناتك. ومع ذلك، نوصي دائمًا باتباع قواعد اللعبة وشروط الخدمة الخاصة بها.
+                        </div>
+                    </div>
+                    <div x-data="{ open: false }" class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+                        <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                            <span class="text-lg font-semibold">كيف يمكنني البدء باستخدام D-BOT؟</span>
+                            <i :class="open ? 'fa-chevron-up' : 'fa-chevron-down'" class="fas transition-transform duration-300"></i>
+                        </button>
+                        <div x-show="open" class="mt-4 text-gray-600 dark:text-gray-300">
+                            للبدء، قم بزيارة صفحة الأسعار واختر الخطة المناسبة لك. بعد الاشتراك، ستتلقى تعليمات التثبيت والإعداد. يمكنك أيضًا الرجوع إلى الدليل التعليمي للحصول على إرشادات مفصلة.
+                        </div>
+                    </div>
+                </div>
+                <div x-show="activeTab === 'technical'" class="space-y-6">
+                    <div x-data="{ open: false }" class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+                        <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                            <span class="text-lg font-semibold">ما هي متطلبات النظام لتشغيل D-BOT؟</span>
+                            <i :class="open ? 'fa-chevron-up' : 'fa-chevron-down'" class="fas transition-transform duration-300"></i>
+                        </button>
+                        <div x-show="open" class="mt-4 text-gray-600 dark:text-gray-300">
+                            يتطلب D-BOT نظام تشغيل Windows 10 أو أحدث، مع 4 جيجابايت من ذاكرة الوصول العشوائي على الأقل، ومساحة 500 ميجابايت على القرص الصلب. يجب أيضًا أن يكون لديك اتصال إنترنت مستقر.
+                        </div>
+                    </div>
+                    <div x-data="{ open: false }" class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+                        <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                            <span class="text-lg font-semibold">هل يمكنني استخدام D-BOT على أجهزة متعددة؟</span>
+                            <i :class="open ? 'fa-chevron-up' : 'fa-chevron-down'" class="fas transition-transform duration-300"></i>
+                        </button>
+                        <div x-show="open" class="mt-4 text-gray-600 dark:text-gray-300">
+                            يعتمد ذلك على نوع الاشتراك الخاص بك. الخطة الأساسية تسمح بالاستخدام على جهاز واحد فقط، بينما تسمح الخطط المتقدمة والسنوية بالاستخدام على عدة أجهزة.
+                        </div>
+                    </div>
+                    <div x-data="{ open: false }" class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+                        <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                            <span class="text-lg font-semibold">كيف يتم تحديث D-BOT؟</span>
+                            <i :class="open ? 'fa-chevron-up' : 'fa-chevron-down'" class="fas transition-transform duration-300"></i>
+                        </button>
+                        <div x-show="open" class="mt-4 text-gray-600 dark:text-gray-300">
+                            يتم تحديث D-BOT تلقائيًا عند توفر إصدارات جديدة. ستتلقى إشعارًا عند تثبيت التحديثات. يمكنك أيضًا التحقق من وجود تحديثات يدويًا من خلال الإعدادات في واجهة البوت.
+                        </div>
+                    </div>
+                </div>
+                <div x-show="activeTab === 'pricing'" class="space-y-6">
+                    <div x-data="{ open: false }" class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+                        <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                            <span class="text-lg font-semibold">ما هي خطط الاشتراك المتاحة؟</span>
+                            <i :class="open ? 'fa-chevron-up' : 'fa-chevron-down'" class="fas transition-transform duration-300"></i>
+                        </button>
+                        <div x-show="open" class="mt-4 text-gray-600 dark:text-gray-300">
+                            نقدم ثلاث خطط اشتراك: الخطة الأساسية (9.99$ شهريًا)، الخطة المتقدمة (24.99$ شهريًا)، والخطة السنوية (199.99$ سنويًا). كل خطة تأتي مع مجموعة مختلفة من الميزات والمزايا.
+                        </div>
+                    </div>
+                    <div x-data="{ open: false }" class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+                        <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                            <span class="text-lg font-semibold">هل هناك فترة تجريبية مجانية؟</span>
+                            <i :class="open ? 'fa-chevron-up' : 'fa-chevron-down'" class="fas transition-transform duration-300"></i>
+                        </button>
+                        <div x-show="open" class="mt-4 text-gray-600 dark:text-gray-300">
+                            نعم، نقدم فترة تجريبية مجانية لمدة 7 أيام للخطة الأساسية. يمكنك تجربة جميع الميزات خلال هذه الفترة دون أي التزام.
+                        </div>
+                    </div>
+                    <div x-data="{ open: false }" class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+                        <button @click="open = !open" class="flex justify-between items-center w-full text-left">
+                            <span class="text-lg font-semibold">هل يمكنني إلغاء اشتراكي في أي وقت؟</span>
+                            <i :class="open ? 'fa-chevron-up' : 'fa-chevron-down'" class="fas transition-transform duration-300"></i>
+                        </button>
+                        <div x-show="open" class="mt-4 text-gray-600 dark:text-gray-300">
+                            نعم، يمكنك إلغاء اشتراكك في أي وقت. إذا قمت بالإلغاء، ستستمر في الوصول إلى الخدمة حتى نهاية فترة الفوترة الحالية.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 p-8 mt-24">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 D-BOT. جميع الحقوق محفوظة.</p>
+            <p>تم التطوير بواسطة Ahmed.R</p>
+            <div class="mt-4">
+                <a href="#" class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 mx-2"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 mx-2"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+
+        // Check for saved theme preference or use device preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
+
+        // Toggle theme
+        themeToggle.addEventListener('click', function() {
+            htmlElement.classList.toggle('dark');
+            localStorage.theme = htmlElement.classList.contains('dark') ? 'dark' : 'light';
+        });
+    </script>
+</body>
+</html>
+
