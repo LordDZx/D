@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /
+
+# لا تحاول فالموقع محمي
+# Do not attempt, the site is protected
+
+# Ahmed.R
+# BlackHat anynamous
