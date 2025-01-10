@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحميل D-BOT</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&display=swap');
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.dark {
+            background-color: #1a202c;
+            color: #e2e8f0;
+        }
+
+        .download-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            max-width: 400px;
+            width: 90%;
+            padding: 2rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dark .download-card {
+            background: #2d3748;
+            color: #e2e8f0;
+        }
+
+        .icon {
+            width: 64px;
+            height: 64px;
+            color: #2563eb;
+        }
+
+        .download-btn {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: background-color 0.2s;
+        }
+
+        .download-btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        .download-btn:disabled {
+            background-color: #93c5fd;
+            cursor: not-allowed;
+        }
+
+        .file-info {
+            background-color: #f3f4f6;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+            transition: background-color 0.3s;
+        }
+
+        .dark .file-info {
+            background-color: #4a5568;
+        }
+
+        .spinner {
+            animation: spin 1s linear infinite;
+            display: none;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .toggle-btn {
+            background-color: #e2e8f0;
+            color: #1a202c;
+            border: none;
+            border-radius: 9999px;
+            padding: 8px 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .dark .toggle-btn {
+            background-color: #4a5568;
+            color: #e2e8f0;
+        }
+
+        .home-btn {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 9999px;
+            padding: 8px 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .home-btn:hover {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen flex flex-col items-center justify-center p-4">
+        <div class="w-full max-w-md mb-4 flex justify-between items-center">
+            <a href="https://d-bot.netlify.app/" class="home-btn">الصفحة الرئيسية</a>
+            <button id="toggleMode" class="toggle-btn">الوضع الداكن</button>
+        </div>
+        <div class="download-card">
+            <div class="text-center">
+                <!-- Download Icon -->
+                <svg class="icon mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+
+                <h1 class="text-2xl font-bold mb-2">تحميل D-BOT</h1>
+                <p class="text-gray-500 dark:text-gray-400 mb-6">قم بتحميل أحدث إصدار من D-BOT</p>
+
+                <div class="file-info">
+                    <div class="info-row">
+                        <span class="font-medium">حجم الملف:</span>
+                        <span class="text-gray-500 dark:text-gray-400">25.4 MB</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="font-medium">الإصدار:</span>
+                        <span class="text-gray-500 dark:text-gray-400">2.1.0</span>
+                    </div>
+                </div>
+
+                <button id="downloadBtn" class="download-btn">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    <span id="btnText">تحميل الآن</span>
+                    <svg id="spinner" class="spinner w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                </button>
+
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-4">
+                    بتحميلك للبرنامج، فإنك توافق على شروط الاستخدام وسياسة الخصوصية
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const downloadBtn = document.getElementById('downloadBtn');
+        const btnText = document.getElementById('btnText');
+        const spinner = document.getElementById('spinner');
+        const toggleModeBtn = document.getElementById('toggleMode');
+
+        downloadBtn.addEventListener('click', async () => {
+            // Disable button and show loading state
+            downloadBtn.disabled = true;
+            btnText.textContent = 'جاري التحميل...';
+            spinner.style.display = 'block';
+
+            try {
+                
+                const response = await fetch('BOT.rar');
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                a.download = 'D-BOT.zip';
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+            } catch (error) {
+                console.error('Download failed:', error);
+                alert('حدث خطأ أثناء التحميل. يرجى المحاولة مرة أخرى.');
+            } finally {
+                // Reset button state
+                downloadBtn.disabled = false;
+                btnText.textContent = 'تحميل الآن';
+                spinner.style.display = 'none';
+            }
+        });
+
+        // Dark mode toggle
+        toggleModeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            if (document.body.classList.contains('dark')) {
+                toggleModeBtn.textContent = 'الوضع الفاتح';
+            } else {
+                toggleModeBtn.textContent = 'الوضع الداكن';
+            }
+        });
+    </script>
+</body>
+</html>
