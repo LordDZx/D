@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض فيديو D-BOT</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&display=swap');
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.dark {
+            background-color: #1a202c;
+            color: #e2e8f0;
+        }
+
+        .video-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            max-width: 800px;
+            width: 90%;
+            padding: 2rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dark .video-container {
+            background: #2d3748;
+            color: #e2e8f0;
+        }
+
+        .toggle-btn, .home-btn, .download-btn {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 9999px;
+            padding: 8px 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .toggle-btn:hover, .home-btn:hover, .download-btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        .dark .toggle-btn {
+            background-color: #4a5568;
+            color: #e2e8f0;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="w-full max-w-4xl mb-4 flex justify-between items-center">
+        <a href="https://d-bot.netlify.app/" class="home-btn">الصفحة الرئيسية</a>
+        <button id="toggleMode" class="toggle-btn">الوضع الداكن</button>
+    </div>
+    <div class="video-container">
+        <h1 class="text-2xl font-bold mb-4 text-center">فيديو تعريفي عن D-BOT</h1>
+        <video controls poster="/placeholder.svg?height=450&width=800">
+            <source src="/path/to/your/video.mp4" type="video/mp4">
+            عذرًا، متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+        <p class="mt-4 text-gray-600 dark:text-gray-400">
+            شاهد هذا الفيديو التعريفي لمعرفة المزيد عن كيفية استخدام D-BOT وميزاته الرائعة. اكتشف كيف يمكن لـ D-BOT أن يساعدك في تحسين أدائك في لعبة GGE.
+        </p>
+        <div class="mt-6 flex justify-center">
+            <button class="download-btn flex items-center">
+                <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                تحميل الفيديو
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const toggleModeBtn = document.getElementById('toggleMode');
+
+        // Dark mode toggle
+        toggleModeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            if (document.body.classList.contains('dark')) {
+                toggleModeBtn.textContent = 'الوضع الفاتح';
+            } else {
+                toggleModeBtn.textContent = 'الوضع الداكن';
+            }
+        });
+
+        // Video download functionality
+        document.querySelector('.download-btn').addEventListener('click', () => {
+            // Replace with the actual video download link
+            const videoUrl = 'BOT.mp4';
+            const link = document.createElement('a');
+            link.href = videoUrl;
+            link.download = 'D-BOT_intro_video.mp4';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    </script>
+</body>
+</html>
