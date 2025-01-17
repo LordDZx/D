@@ -138,12 +138,12 @@
                     </div>
                 </div>
 
-                <a href="https://limewire.com/d/92e58372-b0db-4e3e-a464-dc7711cbb5fe#AYbBjdoq53UXlgcXLsZwsJCRn4JJkpe9XFYzD2lna3o" class="download-btn">
+                <button id="downloadBtn" class="download-btn">
                     <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                     </svg>
                     <span id="btnText">تحميل الآن</span>
-                </a>
+                </button>
 
                 <p class="text-sm text-gray-500 dark:text-gray-400 mt-4">
                     بتحميلك للبرنامج، فإنك توافق على شروط الاستخدام وسياسة الخصوصية
@@ -154,6 +154,7 @@
 
     <script>
         const toggleModeBtn = document.getElementById('toggleMode');
+        const downloadBtn = document.getElementById('downloadBtn');
 
         // Dark mode toggle
         toggleModeBtn.addEventListener('click', () => {
@@ -163,6 +164,11 @@
             } else {
                 toggleModeBtn.textContent = 'الوضع الداكن';
             }
+        });
+
+        // Download button click handler
+        downloadBtn.addEventListener('click', () => {
+            window.location.href = "https://limewire.com/d/92e58372-b0db-4e3e-a464-dc7711cbb5fe#AYbBjdoq53UXlgcXLsZwsJCRn4JJkpe9XFYzD2lna3o";
         });
     </script>
 </body>
